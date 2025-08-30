@@ -68,8 +68,12 @@ body{
 
 /*Home*/
 
+.infoText{
+  font-family: "lilita one";
+  color: #26667f;
+}
+
 #upper{
-  margin-top: 5vh;
   border: 0px solid white;
   display: flex;
 }
@@ -77,14 +81,16 @@ body{
 #geoFinder2{
   font-family: "lilita one";
   color: #67c090;
+  font-size: 5vh;
 }
 
 #searchBar{
-  margin-left: 50vh;
+  margin-left: 45vh;
   background-color: #d9f9e8;
   border: 1px solid #d9f9e8;
   border-radius: 2px;
   font-family: "lilita one";
+  width: 30vh;
 }
 
 .upperBtn{
@@ -98,4 +104,35 @@ body{
 .upperBtn:active{
   background-color: #4a8a68;
   border: 1px solid #4a8a68;
+}
+
+#lower{
+  border: 1px solid white;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+}
+
+#info{
+  border: 1px solid red;
+  flex: 1
+}
+
+#info-box1{
+  background-color: #67c090;
+  border: 1px solid #67c090;
+  border-radius: 20px;
+  height: 10vh;
+  width: 50vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-indent: 20px;
+}
+
+
+
+#history{
+  border: 1px solid blue;
+  flex: 1;
 }
