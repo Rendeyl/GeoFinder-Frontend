@@ -18,9 +18,26 @@ function Home(){
                 <div id="info-box1">
                     <h1 className="infoText">IP:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{current_ip}</h1>
                 </div>
+                <div id="info-box2">
+                    <h1 className="infoText">City: </h1>
+                    <h1 className="infoText">Region: </h1>
+                    <h1 className="infoText">Country: </h1>
+                    <h1 className="infoText">Location: </h1>
+                    <h1 className="infoText">Timezone: </h1>
+                </div>
+                <div id="info-box3">
+                    <h1 className="infoText">Org: </h1>
+                </div>
             </div>
 
-            <div id="history"></div>
+            <div id="history">
+                <div id="history-box1">
+                    <h1 className="infoText">History</h1>
+                    <div id="history-box2">
+
+                    </div>
+                </div>
+            </div>
         </div>
         </>
     );
