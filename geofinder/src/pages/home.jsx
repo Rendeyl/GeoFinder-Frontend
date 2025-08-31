@@ -1,8 +1,16 @@
-
+import { useEffect, useState } from "react";
 
 function Home(){
+    const [info, setInfo] = useState(null);
 
-    const current_ip = "1.2.34.52";
+    useEffect(() =>{
+        fetch("https://ipinfo.io/json")
+        .then((res) => res.json())
+        .then((data) => {
+            setInfo(data);
+        })
+        .catch((err) => console.error(err));
+    }, []);
 
     return(
         <>
@@ -16,17 +24,17 @@ function Home(){
         <div id="lower">
             <div id="info">
                 <div id="info-box1">
-                    <h1 className="infoText">IP:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{current_ip}</h1>
+                    <h1 className="infoText">IP:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{info?.ip}</h1>
                 </div>
                 <div id="info-box2">
-                    <h1 className="infoText">City: </h1>
-                    <h1 className="infoText">Region: </h1>
-                    <h1 className="infoText">Country: </h1>
-                    <h1 className="infoText">Location: </h1>
-                    <h1 className="infoText">Timezone: </h1>
+                    <h1 className="infoText">City: &nbsp; {info?.city}</h1>
+                    <h1 className="infoText">Region: &nbsp; {info?.region} </h1>
+                    <h1 className="infoText">Country: &nbsp; {info?.country}</h1>
+                    <h1 className="infoText">Location: &nbsp; {info?.loc}</h1>
+                    <h1 className="infoText">Timezone: &nbsp; {info?.timezone}</h1>
                 </div>
                 <div id="info-box3">
-                    <h1 className="infoText">Org: </h1>
+                    <h1 className="infoText">Org: {info?.org} </h1>
                 </div>
             </div>
 
