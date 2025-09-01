@@ -36,7 +36,7 @@ function Login(){
             <div id="box1">
             <div id="loginBox">
                 <h1 id="geoFinder">GeoFinder</h1>
-                <input type="email" className="userInput" placeholder="Email" value={username} onChange={(e) => setUsername(e.target.value)}/>
+                <input type="email" className="userInput" placeholder="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
                 <input type="password" className="userInput" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                 <button id="loginBtn" onClick={handleLogin}>Log-in</button>
             </div>
