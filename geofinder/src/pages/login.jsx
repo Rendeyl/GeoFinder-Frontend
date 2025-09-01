@@ -21,6 +21,8 @@ function Login(){
 
             if(res.ok){
                 navigate("/home");
+            }else{
+                alert("Error");
             }
 
         }catch (err){
@@ -36,7 +38,7 @@ function Login(){
                 <h1 id="geoFinder">GeoFinder</h1>
                 <input type="email" className="userInput" placeholder="Email" value={username} onChange={(e) => setUsername(e.target.value)}/>
                 <input type="password" className="userInput" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
-                <button id="loginBtn">Log-in</button>
+                <button id="loginBtn" onClick={handleLogin}>Log-in</button>
             </div>
             </div>
         </>
