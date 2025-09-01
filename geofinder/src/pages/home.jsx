@@ -14,7 +14,7 @@ function Home(){
         .catch((err) => console.error(err));
     }, []);
 
-    async function addHistory() {
+    async function addHistory(newInfo) {
         try{
             const res = await fetch("https://geofinder-api.vercel.app/api/history",
                 {
@@ -22,7 +22,15 @@ function Home(){
                     headers: {
                         "Content-Type": "application/json"
                     },
-                    body: JSON.stringify({ ip: info?.ip, city: info?.city, region: info?.region, country: info?.country, location: info?.location, timezone: info?.timezone, org: info?.org })
+                    body: JSON.stringify({
+                        ip: newInfo.ip,
+                        city: newInfo.city,
+                        region: newInfo.region,
+                        country: newInfo.country,
+                        location: newInfo.loc,
+                        timezone: newInfo.timezone,
+                        org: newInfo.org
+                     })
                 }
             )
 
@@ -43,7 +51,7 @@ function Home(){
             .then((res) => res.json())
             .then((data) => {
             setInfo(data);
-            addHistory();
+            addHistory(data);
         })
         }catch (err){
             console.log(err);
