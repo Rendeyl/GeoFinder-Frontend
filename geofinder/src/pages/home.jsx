@@ -10,7 +10,7 @@ function Home(){
         .then((res) => res.json())
         .then((data) => {
             setInfo(data);
-        })
+        })  
         .catch((err) => console.error(err));
     }, []);
 
@@ -39,31 +39,6 @@ function Home(){
         }
     }
 
-    async function call() {
-        try{
-            const res = await fetch("https://geofinder-api.vercel.app/api/login",
-                {
-                    method: "GET",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                }
-            );
-
-            const data = await res.json();
-
-            if(res.ok){
-                console.log(data.message);
-            }else{
-                alert("error");
-            }
-
-        }catch (err){
-            console.log(err);
-            alert("error");
-        }
-    }
-
     return(
         <>
         <div id="upper">
@@ -72,7 +47,7 @@ function Home(){
             </Link>
             <input type="text" placeholder="Search IP" id="searchBar" value={search} onChange={(e) => setSearch(e.target.value)}/>
             <button className="upperBtn" onClick={searchIP}>Search</button>
-            <button className="upperBtn" onClick={call}>Clear</button>
+            <button className="upperBtn" onClick={clearIP}>Clear</button>
         </div>
 
         <div id="lower">
