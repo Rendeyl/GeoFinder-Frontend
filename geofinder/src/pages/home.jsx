@@ -14,12 +14,36 @@ function Home(){
         .catch((err) => console.error(err));
     }, []);
 
+    async function addHistory() {
+        try{
+            const res = await fetch("https://geofinder-api.vercel.app/api/history",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ ip: info?.ip, city: info?.city, region: info?.region, country: info?.country, location: info?.location, timezone: info?.timezone, org: info?.org })
+                }
+            )
+
+            if(res.ok){
+                console.log("History Added");
+            }else{
+                alert("History Adding Error");
+            }
+
+        }catch (err){
+            console.log(err);
+        }
+    }
+
     async function searchIP() {
         try{
             fetch(`https://ipinfo.io/${search}/geo`)
             .then((res) => res.json())
             .then((data) => {
             setInfo(data);
+            addHistory();
         })
         }catch (err){
             console.log(err);
