@@ -43,11 +43,10 @@ function Home(){
         try{
             const res = await fetch("https://geofinder-api.vercel.app/api/login",
                 {
-                    method: "POST",
+                    method: "GET",
                     headers: {
                         "Content-Type": "application/json"
                     },
-                    body: JSON.stringify({ username, password }),
                 }
             );
 
