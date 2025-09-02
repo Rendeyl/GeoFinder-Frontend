@@ -100,7 +100,7 @@ function Home(){
 
     async function deleteHistory(id) {
   try {
-    const res = await fetch(`https://geofinder-api.vercel.app/api/history/${id}`, {
+    const res = await fetch(`https://geofinder-api.vercel.app/api/history?id=${id}`, {
       method: "DELETE",
     });
 
