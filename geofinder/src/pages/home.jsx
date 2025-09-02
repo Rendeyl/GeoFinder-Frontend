@@ -88,6 +88,34 @@ function Home(){
         }
     }
 
+    async function recoverIP(ip) {
+        try {
+            const res = await fetch(`https://ipinfo.io/${ip}/geo`);
+            const data = await res.json();
+            setInfo(data);
+        }catch (err) {
+            console.error("Recover IP Error:", err);
+        }
+    }
+
+    async function deleteHistory(id) {
+  try {
+    const res = await fetch(`https://geofinder-api.vercel.app/api/history/${id}`, {
+      method: "DELETE",
+    });
+
+    if (res.ok) {
+      console.log("History deleted");
+      fetchHistory();
+    } else {
+      console.error("Delete failed");
+    }
+  } catch (err) {
+    console.error("Delete History Error:", err);
+  }
+}
+
+
     return(
         <>
         <div id="upper">
@@ -121,7 +149,7 @@ function Home(){
                     <h1 className="infoText">History</h1>
                     <div id="history-box2">
                         {history.map((item) => (
-                            <HistoryTab key={item.id} ip={item.ip}/>
+                            <HistoryTab key={item.id} ip={item.ip} onRecover={() => recoverIP(item.ip)}onDelete={() => deleteHistory(item.id)}/>
                         ))}
                     </div>
                 </div>
