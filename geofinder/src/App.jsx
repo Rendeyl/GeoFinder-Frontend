@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from './pages/login'
 import './App.css'
 import Home from './pages/home';
+import HistoryTab from './components/history-tab';
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
     <>
       <Router>
       <Routes>
-        <Route path="/" element={<Login/>}/>
+        <Route path="/" element={<Home/>}/>
         <Route path="/Home" element={<Home/>}/>
       </Routes> 
     </Router> 

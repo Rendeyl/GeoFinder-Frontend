@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import HistoryTab from "../components/history-tab";
 
 function Home(){
     const [info, setInfo] = useState(null);
     const [search, setSearch] = useState("");
+    const [history, setHistory] = useState([]);
 
     useEffect(() =>{
         fetch("https://ipinfo.io/json")
@@ -12,7 +14,21 @@ function Home(){
             setInfo(data);
         })  
         .catch((err) => console.error(err));
+
+        fetchHistory();
     }, []);
+
+    async function fetchHistory() {
+    try {
+      const res = await fetch("https://geofinder-api.vercel.app/api/history");
+      if (!res.ok) throw new Error("Failed to fetch history");
+
+      const data = await res.json();
+      setHistory(data);
+    } catch (err) {
+      console.error("Fetch History Error:", err);
+    }
+  }
 
     async function addHistory(newInfo) {
         try{
@@ -36,6 +52,7 @@ function Home(){
 
             if(res.ok){
                 console.log("History Added");
+                fetchHistory();
             }else{
                 alert("History Adding Error");
             }
@@ -103,7 +120,9 @@ function Home(){
                 <div id="history-box1">
                     <h1 className="infoText">History</h1>
                     <div id="history-box2">
-
+                        {history.map((item) => (
+                            <HistoryTab key={item.id} ip={item.ip}/>
+                        ))}
                     </div>
                 </div>
             </div>
