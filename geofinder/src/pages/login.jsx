@@ -25,6 +25,7 @@ function Login(){
 
             if(res.ok){
                 console.log(data.message);
+                localStorage.setItem("token", data.token);
                 navigate("/home");
             }else{
                 alert("Invalid Login");
