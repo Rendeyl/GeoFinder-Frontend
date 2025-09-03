@@ -8,6 +8,8 @@ function Login(){
     const navigate = useNavigate();
 
     async function handleLogin() {
+        console.log(email);
+        console.log(password);
         try{
             const res = await fetch("https://geofinder-api.vercel.app/api/login",
                 {
@@ -39,7 +41,7 @@ function Login(){
         <>
             <div id="box1">
             <div id="loginBox">
-                <h1 id="geoFinder">GeoFinder</h1>
+                <h1 id="geoFinder">GeoFinder</h1>   
                 <input type="text" className="userInput" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                 <input type="password" className="userInput" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                 <button id="loginBtn" onClick={handleLogin}>Log-in</button>
