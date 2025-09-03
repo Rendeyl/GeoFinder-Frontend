@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { data, Link, Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 function Login(){
@@ -19,8 +19,11 @@ function Login(){
                 }
             )
 
+            const data = await res.json();
+
             if(res.ok){
                 console.log(data.message);
+                localStorage.setItem("token", data.token);
                 navigate("/home");
             }else{
                 alert("Invalid Login");
