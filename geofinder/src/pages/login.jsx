@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-function Login(){
+function Login( { setIsLoggedIn } ){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
@@ -25,6 +25,7 @@ function Login(){
 
             if(res.ok){
                 console.log(data.message);
+                setIsLoggedIn(true);
                 localStorage.setItem("token", data.token);
                 navigate("/home");
             }else{
