@@ -1,28 +1,24 @@
-import { useEffect, useState } from 'react'
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from './pages/login'
 import './App.css'
 import Home from './pages/home';
+import HistoryTab from './components/history-tab';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (token) {
-      setIsLoggedIn(true);
-    }
-  }, []);
-
 
   return (
-    <Router>
+    <>
+      <Router>
       <Routes>
-        <Route path="/" element={isLoggedIn ? <Navigate to="/home" /> : <Login setIsLoggedIn={setIsLoggedIn} />} />
-        <Route path="/home" element={isLoggedIn ? <Home /> : <Navigate to="/" />} />
-      </Routes>
-    </Router>
-  );
+        <Route path="/" element={<Login/>}/>
+        <Route path="/Home" element={<Home/>}/>
+      </Routes> 
+    </Router> 
+    </>
+  )
 }
 
 export default App
