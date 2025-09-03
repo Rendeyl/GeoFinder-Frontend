@@ -94,6 +94,7 @@ a {
   font-family: "lilita one";
   color: #67c090;
   font-size: 5vh;
+  cursor: pointer;
 }
 
 #searchBar{

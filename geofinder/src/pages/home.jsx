@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import HistoryTab from "../components/history-tab";
+import { useNavigate } from "react-router-dom"; 
 
-function Home(){
+function Home( { setIsLoggedIn } ){
     const [info, setInfo] = useState(null);
     const [search, setSearch] = useState("");
     const [history, setHistory] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() =>{
         fetch("https://ipinfo.io/json")
@@ -115,13 +117,17 @@ function Home(){
   }
 }
 
+    const handleLogout = () => {
+        localStorage.removeItem("token");
+        setIsLoggedIn(false);
+        navigate("/");  
+    }
+
 
     return(
         <>
         <div id="upper">
-            <Link to={"/"}>
-            <h1 id="geoFinder2">GeoFinder</h1>
-            </Link>
+            <h1 id="geoFinder2" onClick={handleLogout}>GeoFinder</h1>
             <input type="text" placeholder="Search IP" id="searchBar" value={search} onChange={(e) => setSearch(e.target.value)}/>
             <button className="upperBtn" onClick={searchIP}>Search</button>
             <button className="upperBtn" onClick={clearIP}>Clear</button>
