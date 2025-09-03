@@ -4,6 +4,10 @@
   
 body{
   background-color: #26667f;
+  background: linear-gradient(to bottom, #26667f, #6ba4ba);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; 
 }
 
 a {
@@ -27,6 +31,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0px 4px 10px 2px rgba(0,0,0,0.3);
 }
 
 #geoFinder{
@@ -43,13 +48,14 @@ a {
 
 .userInput{
   font-family: "lilita one";
-  border: 1px solid #d9f9e8;
+  border: 2px solid #286847;
   border-radius: 15px;
   height: 5vh;
   width: 35vh;
   margin-bottom: 3vh;
   background-color: #d9f9e8;
   color: #26667f;
+  text-indent: 5px;
 }
 
 .userInput::placeholder{
@@ -62,7 +68,7 @@ a {
   width: 20vh;
   border-radius: 20px;
   background-color: #26667f;
-  border: 1px solid #26667f;
+  border: 1px solid #112f3b;
   font-family: "lilita one";
   color: #d9f9e8;
 }
@@ -93,10 +99,11 @@ a {
 #searchBar{
   margin-left: 45vh;
   background-color: #d9f9e8;
-  border: 1px solid #d9f9e8;
+  border: 2px solid #38a96c;
   border-radius: 2px;
   font-family: "lilita one";
   width: 30vh;
+  text-indent: 5px;
 }
 
 .upperBtn{
@@ -114,10 +121,11 @@ a {
 
 #lower{
   margin-top: 5vh;
-  border: 1px solid white;
+  border: 0px solid white;
   height: 80vh;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 #info{
@@ -136,6 +144,7 @@ a {
   justify-content: flex-start;
   align-items: center;
   text-indent: 20px;
+  box-shadow: 0px 4px 10px 2px rgba(0,0,0,0.3);
 }
 
 #info-box2{
@@ -151,6 +160,7 @@ a {
   align-items: flex-start;
   text-indent: 20px;
   gap: 1vh;
+  box-shadow: 0px 4px 10px 2px rgba(0,0,0,0.3);
 }
 
 #info-box3{
@@ -165,6 +175,7 @@ a {
   justify-content: center;
   align-items: start;
   text-indent: 20px;
+  box-shadow: 0px 4px 10px 2px rgba(0,0,0,0.3);
 }
 
 #history{
@@ -186,6 +197,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 4px 10px 2px rgba(0,0,0,0.3);
 }
 
 #history-box2{
@@ -201,6 +213,7 @@ a {
   align-items: center;
   overflow-y: auto;
   padding-right: 5px;
+  box-shadow: 0px 4px 10px 2px rgba(0,0,0,0.3);
 }
 
 /*History Tab*/
