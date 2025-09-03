@@ -3,7 +3,7 @@ import { Link, Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 function Login(){
-    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
@@ -15,7 +15,7 @@ function Login(){
                     headers: {
                         "Content-Type": "application/json"
                     },
-                    body: JSON.stringify({ username, password})
+                    body: JSON.stringify({ email, password})
                 }
             )
 
@@ -40,7 +40,7 @@ function Login(){
             <div id="box1">
             <div id="loginBox">
                 <h1 id="geoFinder">GeoFinder</h1>
-                <input type="text" className="userInput" placeholder="Email" value={username} onChange={(e) => setUsername(e.target.value)}/>
+                <input type="text" className="userInput" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                 <input type="password" className="userInput" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                 <button id="loginBtn" onClick={handleLogin}>Log-in</button>
             </div>
