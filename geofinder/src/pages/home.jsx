@@ -150,6 +150,21 @@ function Home( { setIsLoggedIn } ){
                 </div>
             </div>
 
+            <div id="map">
+                {info?.loc && (
+                    <iframe
+                        width="400"
+                        height="400"
+                        style={{ border: 0 }}
+                        loading="lazy"
+                        allowFullScreen
+                        referrerPolicy="no-referrer-when-downgrade"
+                        src={`https://www.google.com/maps?q=${info.loc}&output=embed`}
+                    ></iframe>
+                )}
+            </div>
+
+
             <div id="history">
                 <div id="history-box1">
                     <h1 className="infoText">History</h1>

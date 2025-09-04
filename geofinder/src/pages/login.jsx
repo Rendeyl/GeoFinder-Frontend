@@ -8,8 +8,6 @@ function Login( { setIsLoggedIn } ){
     const navigate = useNavigate();
 
     async function handleLogin() {
-        console.log(email);
-        console.log(password);
         try{
             const res = await fetch("https://geofinder-api.vercel.app/api/login",
                 {

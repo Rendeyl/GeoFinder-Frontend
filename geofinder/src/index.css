@@ -253,3 +253,11 @@ a {
 #delete:active{
   background-color: #6f0202;
 }
+
+/* Map */
+
+#map{
+  border: 0px solid black;
+  flex: 1;
+  height: auto;
+}
