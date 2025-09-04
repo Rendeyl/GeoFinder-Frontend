@@ -66,7 +66,7 @@ function Home( { setIsLoggedIn } ){
 
     async function searchIP() {
         try{
-            fetch(`https://ipinfo.io/${search}/geo`);
+            const res = await fetch(`https://ipinfo.io/${search}/geo`);
             const data = await res.json();
 
             if(data.error){
