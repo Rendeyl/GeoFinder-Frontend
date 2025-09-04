@@ -66,12 +66,16 @@ function Home( { setIsLoggedIn } ){
 
     async function searchIP() {
         try{
-            fetch(`https://ipinfo.io/${search}/geo`)
-            .then((res) => res.json())
-            .then((data) => {
+            fetch(`https://ipinfo.io/${search}/geo`);
+            const data = await res.json();
+
+            if(data.error){
+                alert("Invalid IP");
+                return;
+            }
+
             setInfo(data);
             addHistory(data);
-        })
         }catch (err){
             console.log(err);
         }
