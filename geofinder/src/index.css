@@ -1,13 +1,13 @@
-*{
+* {
   margin: 0px;
 }
-  
-body{
+
+body {
   background-color: #26667f;
   background: linear-gradient(to bottom, #26667f, #6ba4ba);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover; 
+  background-size: cover;
 }
 
 a {
@@ -15,13 +15,13 @@ a {
   color: inherit;
 }
 
-#box1{
+#box1 {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#loginBox{
+#loginBox {
   margin-top: 10vh;
   border-radius: 40px;
   border: 1px solid #67c090;
@@ -31,22 +31,22 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0px 4px 10px 2px rgba(0,0,0,0.3);
+  box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.3);
 }
 
-#geoFinder{
+#geoFinder {
   font-family: "lilita one";
   color: #26667f;
   margin-top: 5vh;
   margin-bottom: 15vh;
 }
 
-#logo{
+#logo {
   height: 20vh;
   width: 20vh;
 }
 
-.userInput{
+.userInput {
   font-family: "lilita one";
   border: 2px solid #286847;
   border-radius: 15px;
@@ -58,12 +58,12 @@ a {
   text-indent: 5px;
 }
 
-.userInput::placeholder{
+.userInput::placeholder {
   font-family: "lilita one";
   color: #26667f;
 }
 
-#loginBtn{
+#loginBtn {
   height: 5vh;
   width: 20vh;
   border-radius: 20px;
@@ -73,31 +73,31 @@ a {
   color: #d9f9e8;
 }
 
-#loginBtn:active{
+#loginBtn:active {
   background-color: #1b4657;
 }
 
 /*Home*/
 
-.infoText{
+.infoText {
   font-family: "lilita one";
   color: #26667f;
   font-size: 3vh;
 }
 
-#upper{
+#upper {
   border: 0px solid white;
   display: flex;
 }
 
-#geoFinder2{
+#geoFinder2 {
   font-family: "lilita one";
   color: #67c090;
   font-size: 5vh;
   cursor: pointer;
 }
 
-#searchBar{
+#searchBar {
   margin-left: 45vh;
   background-color: #d9f9e8;
   border: 2px solid #38a96c;
@@ -107,7 +107,7 @@ a {
   text-indent: 5px;
 }
 
-.upperBtn{
+.upperBtn {
   background-color: #67c090;
   border: 1px solid #67c090;
   border-radius: 2px;
@@ -115,12 +115,12 @@ a {
   color: #d9f9e8;
 }
 
-.upperBtn:active{
+.upperBtn:active {
   background-color: #4a8a68;
   border: 1px solid #4a8a68;
 }
 
-#lower{
+#lower {
   margin-top: 5vh;
   border: 0px solid white;
   height: 80vh;
@@ -129,12 +129,12 @@ a {
   align-items: center;
 }
 
-#info{
+#info {
   border: 0px solid red;
-  flex: 1
+  flex: 1;
 }
 
-#info-box1{
+#info-box1 {
   margin-top: 2vh;
   background-color: #67c090;
   border: 1px solid #67c090;
@@ -145,10 +145,10 @@ a {
   justify-content: flex-start;
   align-items: center;
   text-indent: 20px;
-  box-shadow: 0px 4px 10px 2px rgba(0,0,0,0.3);
+  box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.3);
 }
 
-#info-box2{
+#info-box2 {
   margin-top: 2vh;
   background-color: #67c090;
   border: 1px solid #67c090;
@@ -161,10 +161,10 @@ a {
   align-items: flex-start;
   text-indent: 20px;
   gap: 1vh;
-  box-shadow: 0px 4px 10px 2px rgba(0,0,0,0.3);
+  box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.3);
 }
 
-#info-box3{
+#info-box3 {
   margin-top: 2vh;
   background-color: #67c090;
   border: 1px solid #67c090;
@@ -176,17 +176,17 @@ a {
   justify-content: center;
   align-items: start;
   text-indent: 20px;
-  box-shadow: 0px 4px 10px 2px rgba(0,0,0,0.3);
+  box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.3);
 }
 
-#history{
+#history {
   border: 0px solid blue;
   flex: 1;
   display: flex;
   justify-content: flex-end;
 }
 
-#history-box1{
+#history-box1 {
   margin-top: 2vh;
   background-color: #67c090;
   border: 1px solid #67c090;
@@ -198,10 +198,10 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 4px 10px 2px rgba(0,0,0,0.3);
+  box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.3);
 }
 
-#history-box2{
+#history-box2 {
   margin-top: 2vh;
   background-color: #d9f9e8;
   border: 1px solid #d9f9e8;
@@ -214,50 +214,259 @@ a {
   align-items: center;
   overflow-y: auto;
   padding-right: 5px;
-  box-shadow: 0px 4px 10px 2px rgba(0,0,0,0.3);
+  box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.3);
 }
 
 /*History Tab*/
 
-#history-tab-box{
+#history-tab-box {
   margin-top: 2vh;
   display: flex;
   flex-direction: row;
 }
 
-#htIp{
+#htIp {
   font-family: "lilita one";
 }
 
-#htMain{
+#htMain {
   width: 25vh;
   border: 0px solid rgb(145, 145, 145);
   background-color: rgb(145, 145, 145);
 }
 
-#recover{
+#recover {
   background-color: rgb(93, 251, 93);
-  border-color: rgb(93, 251, 93);;
+  border-color: rgb(93, 251, 93);
 }
 
-#recover:active{
+#recover:active {
   background-color: rgb(71, 195, 71);
 }
 
-
-#delete{
+#delete {
   background-color: #ab0202;
   border-color: #ab0202;
 }
 
-#delete:active{
+#delete:active {
   background-color: #6f0202;
 }
 
 /* Map */
 
-#map{
+#map {
   border: 0px solid black;
   flex: 1;
   height: auto;
+}
+
+/* Large Tablets / Small Laptops */
+@media screen and (max-width: 1200px) {
+  #upper {
+    padding: 2vh;
+    gap: 1vh;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #searchBar {
+    margin-left: 0;
+    width: 35vh;
+    height: 4.5vh;
+  }
+
+  #lower {
+    flex-direction: column;
+    height: auto;
+    gap: 4vh;
+    padding-bottom: 5vh;
+  }
+
+  #info,
+  #map,
+  #history {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #info {
+    flex-direction: column;
+  }
+
+  #info-box1,
+  #info-box2,
+  #info-box3,
+  #history-box1 {
+    width: 80%;
+  }
+
+  #history {
+    justify-content: center;
+  }
+
+  iframe {
+    width: 80%;
+    height: 400px;
+  }
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+  #geoFinder2 {
+    font-size: 4vh;
+    text-align: center;
+    width: 100%;
+  }
+
+  #upper {
+    flex-direction: column;
+    gap: 1.5vh;
+  }
+
+  #searchBar {
+    width: 80%;
+    height: 5vh;
+  }
+
+  .upperBtn {
+    width: 40%;
+    height: 5vh;
+  }
+
+  #lower {
+    margin-top: 3vh;
+    gap: 3vh;
+  }
+
+  #info-box1,
+  #info-box2,
+  #info-box3,
+  #history-box1 {
+    width: 90%;
+  }
+
+  #info-box1 {
+    height: auto;
+    padding: 2vh 0;
+  }
+
+  #info-box2 {
+    height: auto;
+    padding: 3vh 0;
+  }
+
+  #info-box3 {
+    height: auto;
+    padding: 2vh 0;
+  }
+
+  .infoText {
+    font-size: 2.3vh;
+  }
+
+  #history-box2 {
+    width: 90%;
+    height: 40vh;
+  }
+
+  iframe {
+    width: 90%;
+    height: 350px;
+  }
+
+  #history-tab-box {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1vh;
+  }
+
+  #htMain {
+    width: 20vh;
+  }
+}
+
+/* Mobile Phones */
+@media screen and (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  #geoFinder2 {
+    font-size: 3.5vh;
+  }
+
+  #searchBar {
+    width: 90%;
+    font-size: 2vh;
+  }
+
+  .upperBtn {
+    width: 45%;
+    font-size: 2vh;
+  }
+
+  #lower {
+    gap: 2vh;
+  }
+
+  #info-box1,
+  #info-box2,
+  #info-box3,
+  #history-box1 {
+    width: 95%;
+    border-radius: 15px;
+  }
+
+  .infoText {
+    font-size: 2vh;
+  }
+
+  #info-box2 {
+    gap: 2vh;
+    padding-left: 1vh;
+  }
+
+  #history-box2 {
+    width: 92%;
+    height: 35vh;
+  }
+
+  iframe {
+    width: 95%;
+    height: 280px;
+  }
+
+  #history-tab-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #htMain {
+    width: 22vh;
+  }
+
+  #recover,
+  #delete {
+    width: 10vh;
+    height: 4vh;
+  }
+
+  #loginBox {
+    width: 90%;
+    height: auto;
+    padding: 5vh 0;
+  }
+
+  .userInput {
+    width: 80%;
+  }
+
+  #loginBtn {
+    width: 60%;
+  }
 }
